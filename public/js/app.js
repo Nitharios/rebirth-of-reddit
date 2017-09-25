@@ -2,7 +2,7 @@
 
 console.log('Sanity Check: Rebirth of Reddit');
 
-retrieveAPI('http://www.reddit.com/r/javascript.json');
+retrieveAPI('https://www.reddit.com/r/aww.json');
 
 function requestListener() {
   return function() {
