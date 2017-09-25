@@ -1,0 +1,23 @@
+// jshint esversion:6
+
+console.log('Sanity Check: Rebirth of Reddit');
+
+retrieveAPI('http://www.reddit.com/r/javascript.json');
+
+function requestListener() {
+  return function() {
+    let parsedDocument = JSON.parse(this.responseText);
+  
+    console.log(parsedDocument);
+  
+    return parsedDocument;
+  };
+}
+
+function retrieveAPI(url) {
+  let apiRequest = new XMLHttpRequest();
+
+  apiRequest.addEventListener("load", requestListener());
+  apiRequest.open("GET", url);
+  apiRequest.send();
+}
