@@ -1,5 +1,19 @@
 // jshint esversion:6
 
+/*
+JSON DOC
+{data: 
+  children:
+    Array[0] [{
+      data: {
+        preview,
+        thumbnail,
+        title,
+        url
+      }
+    }]
+*/
+
 console.log('Sanity Check: Rebirth of Reddit');
 
 retrieveAPI('https://www.reddit.com/r/aww.json');
