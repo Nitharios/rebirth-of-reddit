@@ -35,15 +35,21 @@ body {
       width: 100%;
       height: 55px; }
     body #page_wrapper #navigation {
+      margin: auto;
       background-color: #3B444B;
       width: 100%;
-      height: 35px;
+      height: 40px;
       color: #FFFFFF;
-      padding-top: 18px; }
+      list-style-type: none;
+      margin: 0;
+      padding: 0; }
       body #page_wrapper #navigation .navigation {
-        padding: 17px;
-        margin: 0;
-        width: 100%; }
+        text-align: center;
+        margin: auto;
+        display: inline-block;
+        width: 125px;
+        height: 40px;
+        line-height: 40px; }
       body #page_wrapper #navigation .navigation:hover {
         background-color: #555555; }
       body #page_wrapper #navigation #nav_boards {
@@ -55,21 +61,23 @@ body {
       border: 10px solid transparent;
       background-color: #FFFFFF;
       width: 400px;
-      height: 350px;
+      height: 400px;
       display: inline-block;
       padding-top: 15px; }
       body #page_wrapper .innerWrapper .imagePreview {
         width: 375px;
-        height: 200px; }
+        height: 200px;
+        margin-bottom: 5px; }
       body #page_wrapper .innerWrapper .titleDiv {
         width: 325px;
         text-align: left;
         font-size: 20px;
         font-weight: bold;
         padding-left: 15px;
-        display: block;
-        overflow: auto; }
+        overflow: auto;
+        display: block; }
       body #page_wrapper .innerWrapper .statsDiv {
+        margin-top: 5px;
         width: 325px;
         text-align: left;
         font-size: 12px;

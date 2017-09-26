@@ -66,7 +66,7 @@ function generateDivChildren(array) {
     imagePreview.className = "imagePreview";
     statsDiv.className = "statsDiv";
 
-    if (!array[i].data.preview) imagePreview.src = "http://www.doomsteaddiner.net/blog/wp-content/uploads/2015/10/reddit-logo.png";
+    if (!array[i].data.preview || array[i].data.preview.images[0].source.url.match(/.(png|jpeg|gif)/g)) imagePreview.src = "http://www.doomsteaddiner.net/blog/wp-content/uploads/2015/10/reddit-logo.png";
     else imagePreview.src = array[i].data.preview.images[0].source.url;
     
     titleDiv.innerHTML = (array[i].data.title); 
