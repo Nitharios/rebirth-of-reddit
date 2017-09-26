@@ -12,10 +12,16 @@ body {
 
   @media screen and (max-width: 400px) {
     @include wrapper_size(400px);
+    #header_background {
+      display: none;
+    }
   }
 
   @media screen and (min-width: 400px) {
     @include wrapper_size(1000px);
+    #header {
+      margin: auto;
+    }
   }
 }
 
@@ -26,6 +32,7 @@ div {
 #header {
   background-color: #FFFFFF;
   position: absolute;
+  width: 100px;
   height:55px;
   padding-left: 5px;
 }
@@ -34,18 +41,27 @@ div {
   background-color: #FFFFFF;
   width: 100%;
   height: 55px;
+  margin-bottom: 0px;
+}
+
+#navigation {
+  margin-top: 0px;
+  background-color: #3B444B;
+  width: 100%;
+  height: 45px;
 }
 
 #wrapper {
   margin: auto;
   // text-align: center;
   border: 5px solid black;
+  padding-left: 100px;
 }
 
 .innerWrapper {
   margin: auto;
   // text-align: center;
-  // margin: 5px 5px 10px 5px;
+  margin: 5px 5px 10px 5px;
   padding: 15px;
   background-color: #FFFFFF;
   // border: 5px solid black;
