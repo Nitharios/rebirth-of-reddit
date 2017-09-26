@@ -11,8 +11,8 @@ body {
 
   @media screen and (max-width: 400px) {
     @include wrapper_size(400px);
-    #full_wrapper {
-      height: 1900px;
+    #page_wrapper {
+      height: 1850px;
     }
 
     #header {
@@ -52,7 +52,7 @@ div {
 
 }
 
-#full_wrapper {
+#page_wrapper {
   background-image: url("../assets/bg.jpg");
   background-size: cover;
   width: 100%;
@@ -81,14 +81,31 @@ div {
   height: 35px;
   color: #FFFFFF;
   text-align: center;
-  padding-top: 20px;
+  padding-top: 18px;
+}
+
+.navigation {
+  // border: 1px solid #FFFFFF;
+  padding: 17px;
+  margin: 0;
+  width: 100%;
+  // height: 0px;
+}
+
+.navigation:hover {
+  background-color: #555555;
+}
+
+#nav_boards {
+  border-left: 1px solid #FFFFFF;
+  border-right: 1px solid #FFFFFF;
 }
 
 #wrapper {
-  background-image: url("../../assets/bg.jpg");
+  // background-image: url("../../assets/bg.jpg");
   margin: auto;
   padding-top: 25px;
-  width: 500px;
+  // width: 500px;
 }
 
 .innerWrapper {

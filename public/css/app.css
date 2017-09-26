@@ -5,8 +5,8 @@ body {
   @media screen and (max-width: 400px) {
     body #wrapper {
       max-width: 400px; }
-    body #full_wrapper {
-      height: 1900px; }
+    body #page_wrapper {
+      height: 1850px; }
     body #header {
       width: 150px; }
     body #header_background {
@@ -27,7 +27,7 @@ body {
     body #wrapper {
       padding-left: 100px; } }
 
-#full_wrapper {
+#page_wrapper {
   background-image: url("../assets/bg.jpg");
   background-size: cover;
   width: 100%;
@@ -53,13 +53,23 @@ body {
   height: 35px;
   color: #FFFFFF;
   text-align: center;
-  padding-top: 20px; }
+  padding-top: 18px; }
+
+.navigation {
+  padding: 17px;
+  margin: 0;
+  width: 100%; }
+
+.navigation:hover {
+  background-color: #555555; }
+
+#nav_boards {
+  border-left: 1px solid #FFFFFF;
+  border-right: 1px solid #FFFFFF; }
 
 #wrapper {
-  background-image: url("../../assets/bg.jpg");
   margin: auto;
-  padding-top: 25px;
-  width: 500px; }
+  padding-top: 25px; }
 
 .innerWrapper {
   margin: auto;
