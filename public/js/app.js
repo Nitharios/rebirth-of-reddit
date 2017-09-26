@@ -64,11 +64,12 @@ function generateDivChildren(array) {
     innerWrapper.className = "innerWrapper";
     titleDiv.className = "titleDiv";
     imagePreview.className = "imagePreview";
+    statsDiv.className = "statsDiv";
 
     if (!array[i].data.preview) imagePreview.src = "http://www.doomsteaddiner.net/blog/wp-content/uploads/2015/10/reddit-logo.png";
     else imagePreview.src = array[i].data.preview.images[0].source.url;
     
-    titleDiv.innerHTML = array[i].data.title; 
+    titleDiv.innerHTML = (array[i].data.title).substr(0, 30) + "..."; 
     statsDiv.innerHTML = array[i].data.author + ' ' + 
                          new Date(array[i].data.created*1000) + ' ' +
                          array[i].data.score + ' ' + 
