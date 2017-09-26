@@ -18,7 +18,7 @@ body {
 
     #header_background {
       background-color: #FFFFFF;
-      width: 100%
+      width: 100%;
     }
 
     #wrapper {
@@ -31,11 +31,13 @@ body {
     @include wrapper_size(1000px);
     #header {
       margin: auto;
-      width: 100%;
+      // width: 200px;
     }
 
     #header_background {
-      background-image: "assets/header_bg.svg";
+      background-image: url("../assets/header_bg.svg");
+      background-repeat: no-repeat;
+      background-position: center;
     }
 
     #wrapper {
@@ -49,7 +51,11 @@ div {
 }
 
 #header {
+  background-image: url("../assets/logo.svg");
+  background-repeat: no-repeat;
+  background-position: center;
   position: absolute;
+  width: 100%;
   height:55px;
 }
 
