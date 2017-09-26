@@ -12,15 +12,34 @@ body {
 
   @media screen and (max-width: 400px) {
     @include wrapper_size(400px);
+    #header {
+      float: left;  
+    }
+
     #header_background {
-      display: none;
+      background-color: #FFFFFF;
+      width: 100%
+    }
+
+    #wrapper {
+      padding: 0px;
+      width: 100%;
     }
   }
 
-  @media screen and (min-width: 400px) {
+  @media screen and (min-width: 401px) {
     @include wrapper_size(1000px);
     #header {
       margin: auto;
+      width: 100%;
+    }
+
+    #header_background {
+      background-image: "assets/header_bg.svg";
+    }
+
+    #wrapper {
+      padding-left: 100px;
     }
   }
 }
@@ -30,11 +49,8 @@ div {
 }
 
 #header {
-  background-color: #FFFFFF;
   position: absolute;
-  width: 100px;
   height:55px;
-  padding-left: 5px;
 }
 
 #header_background {
@@ -45,29 +61,33 @@ div {
 }
 
 #navigation {
-  margin-top: 0px;
   background-color: #3B444B;
   width: 100%;
-  height: 45px;
+  height: 35px;
+  color: #FFFFFF;
+  text-align: center;
+  padding-top: 20px;
 }
 
 #wrapper {
   margin: auto;
-  // text-align: center;
-  border: 5px solid black;
-  padding-left: 100px;
+  padding-top: 25px;
 }
 
 .innerWrapper {
   margin: auto;
-  // text-align: center;
-  margin: 5px 5px 10px 5px;
+  border: 10px solid transparent;
+  margin: 5px 20px 20px 5px;
   padding: 15px;
   background-color: #FFFFFF;
   // border: 5px solid black;
   width: 400px;
   height: 350px;
   float: left;
+}
+
+.innerWrapper:hover {
+  border: 10px solid #ED872D;
 }
 
 .imagePreview {
@@ -78,7 +98,7 @@ div {
 .titleDiv {
   width: 325px;
   text-align: left;
-  padding-left: 15px;
+  // padding-left: 5px;
 
   font-size: 20px;
   font-weight: bold;
