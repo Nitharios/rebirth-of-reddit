@@ -45,8 +45,8 @@ body {
       padding: 17px;
       margin: 0;
       width: 100%; }
-      #page_wrapper #navigation .navigation :hover {
-        background-color: #555555; }
+    #page_wrapper #navigation .navigation:hover {
+      background-color: #555555; }
     #page_wrapper #navigation #nav_boards {
       border-left: 1px solid #FFFFFF;
       border-right: 1px solid #FFFFFF; }
@@ -65,13 +65,14 @@ body {
     height: 200px; }
   #page_wrapper .titleDiv {
     width: 325px;
-    height: auto;
     text-align: left;
     font-size: 20px;
     font-weight: bold;
-    padding-left: 15px; }
+    padding-left: 15px;
+    display: block;
+    overflow: auto; }
   #page_wrapper .statsDiv {
     width: 325px;
     text-align: left;
-    padding-left: 20px;
-    font-size: 12px; }
+    font-size: 12px;
+    padding-left: 20px; }
