@@ -7,11 +7,9 @@
 body {
   background-image: url("../../assets/bg.jpg");
   color: #000000;
-
-  font-size: 20px;
-  font-family: 'Oswald', sans-serif;
-  font-weight: bold;
   
+  font-family: 'Oswald', sans-serif;
+
   @media screen and (min-width: 400px) {
     @include wrapper_size(400px);
   }
@@ -36,13 +34,13 @@ div {
   padding: 15px;
   background-color: #FFFFFF;
   // border: 5px solid black;
-  width: 350px;
-  height: 325px;
+  width: 400px;
+  height: 350px;
   float: left;
 }
 
 .imagePreview {
-  width: 325px;
+  width: 375px;
   height: 200px;
 }
 
@@ -50,5 +48,17 @@ div {
   width: 325px;
   text-align: left;
   padding-left: 15px;
+
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.statsDiv {
+  width: 325px;
+  text-align: left;
+
+  padding-left: 20px;
+
+  font-size: 10px;
 }
 

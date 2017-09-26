@@ -43,18 +43,24 @@ function retrieveAPI(url) {
 function generateDivChildren(array) {
   for (let i=1; i<5; i++) {
     let innerWrapper = document.createElement('div');
-    let titleDiv = document.createElement('div');
     let imagePreview = document.createElement('img');
+    let titleDiv = document.createElement('div');
+    let statsDiv = document.createElement('div');
 
     innerWrapper.className = "innerWrapper";
     titleDiv.className = "titleDiv";
     imagePreview.className = "imagePreview";
     imagePreview.src = array[i].data.preview.images[0].source.url;
-    titleDiv.innerHTML = array[i].data.title; console.log(titleDiv);
+    titleDiv.innerHTML = array[i].data.title; 
+    statsDiv.innerHTML = array[i].data.author + ' ' + 
+                         new Date(array[i].data.created*1000) + ' ' +
+                         array[i].data.score + ' ' + 
+                         array[i].data.num_comments;
 
     wrapperDiv.appendChild(innerWrapper);
     innerWrapper.appendChild(imagePreview);
     innerWrapper.appendChild(titleDiv);
+    innerWrapper.appendChild(statsDiv);
   }
 }
 
