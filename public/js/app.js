@@ -44,14 +44,20 @@ function retrieveAPI(url) {
 
 function generateDivChildren(array) {
   console.log(array);
-  for (let i=0; i<array.length; i++) {
+  for (let i=1; i<5; i++) {
+    let innerWrapper = document.createElement('div');
     let previewDiv = document.createElement('div');
+    let imagePreview = document.createElement('img');
 
-    previewDiv.className = "preview";
-    previewDiv.innerHTML = array[i].data.title;
-    console.log(previewDiv);
+    innerWrapper.className = "innerWrapper";
+    previewDiv.className = "previewDiv";
+    imagePreview.className = "imagePreview";
+    imagePreview.src = array[i].data.thumbnail;
+    previewDiv.innerHTML = array[i].data.title; console.log(previewDiv);
 
-    wrapperDiv.appendChild(previewDiv);
+    wrapperDiv.appendChild(innerWrapper);
+    innerWrapper.appendChild(imagePreview);
+    innerWrapper.appendChild(previewDiv);
   }
 }
 

@@ -1,4 +1,17 @@
 body {
-  background-color: #A40000;
-  text-align: center;
-  color: #FFFFFF; }
+  background-image: url("../../assets/bg.jpg");
+  color: #000000; }
+
+.wrapper {
+  max-width: 400px; }
+
+.innerWrapper {
+  border: 1px solid #000000; }
+
+.previewDiv {
+  position: absolute;
+  padding: 20px;
+  display: inline; }
+
+.imagePreview {
+  display: inline; }
