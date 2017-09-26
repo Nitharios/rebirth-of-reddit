@@ -26,7 +26,7 @@ body {
 
     #wrapper {
       padding: 0px;
-      width: 100%;
+      width: 500px;
     }
   }
 
@@ -43,13 +43,9 @@ body {
     }
 
     #wrapper {
-      padding-left: 100px;
+      width: 1000px;
     }
   }
-}
-
-div {
-
 }
 
 #page_wrapper {
@@ -103,9 +99,10 @@ div {
 
 #wrapper {
   // background-image: url("../../assets/bg.jpg");
-  margin: auto;
   padding-top: 25px;
-  // width: 500px;
+  margin: auto;
+  height: inherit;
+  text-align: center;
 }
 
 .innerWrapper {
