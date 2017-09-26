@@ -5,15 +5,18 @@
 }
 
 body {
-  background-image: url("../../assets/bg.jpg");
   color: #000000;
-  
+  margin: 0;
   font-family: 'Oswald', sans-serif;
 
   @media screen and (max-width: 400px) {
     @include wrapper_size(400px);
+    #full_wrapper {
+      height: 1900px;
+    }
+
     #header {
-      float: left;  
+      width: 150px;
     }
 
     #header_background {
@@ -31,7 +34,6 @@ body {
     @include wrapper_size(1000px);
     #header {
       margin: auto;
-      // width: 200px;
     }
 
     #header_background {
@@ -48,6 +50,13 @@ body {
 
 div {
 
+}
+
+#full_wrapper {
+  background-image: url("../assets/bg.jpg");
+  background-size: cover;
+  width: 100%;
+  min-height: 1000px;
 }
 
 #header {
@@ -76,8 +85,10 @@ div {
 }
 
 #wrapper {
+  background-image: url("../../assets/bg.jpg");
   margin: auto;
   padding-top: 25px;
+  width: 500px;
 }
 
 .innerWrapper {
@@ -104,7 +115,6 @@ div {
 .titleDiv {
   width: 325px;
   text-align: left;
-  // padding-left: 5px;
 
   font-size: 20px;
   font-weight: bold;

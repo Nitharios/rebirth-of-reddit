@@ -1,12 +1,14 @@
 body {
-  background-image: url("../../assets/bg.jpg");
   color: #000000;
+  margin: 0;
   font-family: 'Oswald', sans-serif; }
   @media screen and (max-width: 400px) {
     body #wrapper {
       max-width: 400px; }
+    body #full_wrapper {
+      height: 1900px; }
     body #header {
-      float: left; }
+      width: 150px; }
     body #header_background {
       background-color: #FFFFFF;
       width: 100%; }
@@ -24,6 +26,12 @@ body {
       background-position: center; }
     body #wrapper {
       padding-left: 100px; } }
+
+#full_wrapper {
+  background-image: url("../assets/bg.jpg");
+  background-size: cover;
+  width: 100%;
+  min-height: 1000px; }
 
 #header {
   background-image: url("../assets/logo.svg");
@@ -48,8 +56,10 @@ body {
   padding-top: 20px; }
 
 #wrapper {
+  background-image: url("../../assets/bg.jpg");
   margin: auto;
-  padding-top: 25px; }
+  padding-top: 25px;
+  width: 500px; }
 
 .innerWrapper {
   margin: auto;
