@@ -1,17 +1,24 @@
 body {
   background-image: url("../../assets/bg.jpg");
   color: #000000; }
+  @media screen and (max-width: 400px) {
+    body .innerWrapper {
+      max-width: 350px; } }
 
-.wrapper {
-  max-width: 400px; }
+#wrapper {
+  min-width: 400px;
+  margin: auto; }
 
 .innerWrapper {
-  border: 1px solid #000000; }
-
-.previewDiv {
-  position: absolute;
-  padding: 20px;
-  display: inline; }
+  margin: 5px 5px 10px 5px;
+  padding: 10px;
+  background-color: #FFFFFF; }
 
 .imagePreview {
-  display: inline; }
+  width: 325px;
+  height: 200px; }
+
+.titleDiv {
+  font-size: 20px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold; }

@@ -27,7 +27,7 @@ function requestListener() {
   return function() {
     let parsedDocument = JSON.parse(this.responseText).data.children;
     arrayOfAww = parsedDocument;
-
+    console.log(arrayOfAww);
     generateDivChildren(arrayOfAww);
   };
 }
@@ -38,26 +38,23 @@ function retrieveAPI(url) {
   apiRequest.addEventListener("load", requestListener());
   apiRequest.open("GET", url);
   apiRequest.send();
-
-  return arrayOfAww;
 }
 
 function generateDivChildren(array) {
-  console.log(array);
   for (let i=1; i<5; i++) {
     let innerWrapper = document.createElement('div');
-    let previewDiv = document.createElement('div');
+    let titleDiv = document.createElement('div');
     let imagePreview = document.createElement('img');
 
     innerWrapper.className = "innerWrapper";
-    previewDiv.className = "previewDiv";
+    titleDiv.className = "titleDiv";
     imagePreview.className = "imagePreview";
-    imagePreview.src = array[i].data.thumbnail;
-    previewDiv.innerHTML = array[i].data.title; console.log(previewDiv);
+    imagePreview.src = array[i].data.preview.images[0].source.url;
+    titleDiv.innerHTML = array[i].data.title; console.log(titleDiv);
 
     wrapperDiv.appendChild(innerWrapper);
     innerWrapper.appendChild(imagePreview);
-    innerWrapper.appendChild(previewDiv);
+    innerWrapper.appendChild(titleDiv);
   }
 }
 
