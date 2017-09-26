@@ -21,6 +21,13 @@ JSON DOC
 let arrayOfAww = [];
 let arrayInAww = {};
 let wrapperDiv = document.getElementById("wrapper");
+let nav_random = document.getElementById("nav_random");
+let nav_boards = document.getElementById("nav_boards");
+let nav_getapp = document.getElementById("nav_getapp");
+
+nav_random.addEventListener("click", randomSubRGen("https://www.reddit.com/r/Persona5.json"));
+nav_boards.addEventListener("click", randomSubRGen("https://www.reddit.com/r/CryptoMarkets.json"));
+nav_getapp.addEventListener("click", randomSubRGen("https://www.reddit.com/r/apps.json"));
 
 // Need to build a function that grabs the data from the Array in the JSON object
 function requestListener() {
@@ -38,6 +45,13 @@ function retrieveAPI(url) {
   apiRequest.addEventListener("load", requestListener());
   apiRequest.open("GET", url);
   apiRequest.send();
+}
+
+function randomSubRGen(url) {
+  return function() {
+    wrapperDiv.innerHTML = "";
+    return retrieveAPI(url);
+  };
 }
 
 function generateDivChildren(array) {
