@@ -1,31 +1,44 @@
-@mixin div_sizes($max_width) {
-  max-width: $max_width;
+@mixin wrapper_size($wrapper_width) {
+  #wrapper {
+    width: $wrapper_width;
+  }
 }
 
 body {
   background-image: url("../../assets/bg.jpg");
   color: #000000;
+
+  font-size: 20px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
   
-  @media screen and (max-width: 400px) {
-    .innerWrapper {
-      @include div_sizes(350px);
-    }
+  @media screen and (min-width: 400px) {
+    @include wrapper_size(400px);
+  }
+
+  @media screen and (min-width: 800px) {
+    @include wrapper_size(800px);
   }
 }
 
 div {
-  
+
 }
 
 #wrapper {
-  min-width: 400px;
   margin: auto;
+  min-width: 400px;
 }
 
 .innerWrapper {
+  text-align: center;
   margin: 5px 5px 10px 5px;
-  padding: 10px;
+  padding: 15px;
   background-color: #FFFFFF;
+  // border: 5px solid black;
+  width: 350px;
+  height: 325px;
+  float: left;
 }
 
 .imagePreview {
@@ -34,8 +47,8 @@ div {
 }
 
 .titleDiv {
-  font-size: 20px;
-  font-family: 'Oswald', sans-serif;
-  font-weight: bold;
+  width: 325px;
+  text-align: left;
+  padding-left: 15px;
 }
 

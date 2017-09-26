@@ -1,24 +1,34 @@
 body {
   background-image: url("../../assets/bg.jpg");
-  color: #000000; }
-  @media screen and (max-width: 400px) {
-    body .innerWrapper {
-      max-width: 350px; } }
+  color: #000000;
+  font-size: 20px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold; }
+  @media screen and (min-width: 400px) {
+    body #wrapper {
+      width: 400px; } }
+  @media screen and (min-width: 800px) {
+    body #wrapper {
+      width: 800px; } }
 
 #wrapper {
-  min-width: 400px;
-  margin: auto; }
+  margin: auto;
+  min-width: 400px; }
 
 .innerWrapper {
+  text-align: center;
   margin: 5px 5px 10px 5px;
-  padding: 10px;
-  background-color: #FFFFFF; }
+  padding: 15px;
+  background-color: #FFFFFF;
+  width: 350px;
+  height: 325px;
+  float: left; }
 
 .imagePreview {
   width: 325px;
   height: 200px; }
 
 .titleDiv {
-  font-size: 20px;
-  font-family: 'Oswald', sans-serif;
-  font-weight: bold; }
+  width: 325px;
+  text-align: left;
+  padding-left: 15px; }
