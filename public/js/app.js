@@ -25,6 +25,7 @@ let nav_random = document.getElementById("nav_random");
 let nav_boards = document.getElementById("nav_boards");
 let nav_getapp = document.getElementById("nav_getapp");
 
+// Add event listener to navigation to generate new subreddit
 nav_random.addEventListener("click", randomSubRGen("https://www.reddit.com/r/Persona5.json"));
 nav_boards.addEventListener("click", randomSubRGen("https://www.reddit.com/r/CryptoMarkets.json"));
 nav_getapp.addEventListener("click", randomSubRGen("https://www.reddit.com/r/apps.json"));
@@ -47,6 +48,7 @@ function retrieveAPI(url) {
   apiRequest.send();
 }
 
+// will clear current subreddit data and load new one
 function randomSubRGen(url) {
   return function() {
     wrapperDiv.innerHTML = "";
@@ -62,19 +64,13 @@ function generateDivChildren(array) {
     let titleDiv = document.createElement('div');
     let statsDiv = document.createElement('div');
     let currentElement = array[i].data;
-    let currentElementImage = currentElement.preview.images[0].source.url;
-    let redditLogo = 'url("http://www.doomsteaddiner.net/blog/wp-content/uploads/2015/10/reddit-logo.png")';
 
     innerWrapper.className = "innerWrapper";
-    titleDiv.className = "titleDiv";
     imagePreview.className = "imagePreview";
+    titleDiv.className = "titleDiv";
     statsDiv.className = "statsDiv";
 
-    if (!currentElement.preview || currentElementImage.match(/.(png|jpeg|gif)/g)) {
-      imagePreview.style.backgroundImage = redditLogo;
-    } else {
-      imagePreview.style.backgroundImage = `url("${currentElementImage}")`;
-    }
+    imagePreview.style.backgroundImage = generateImage(currentElement, imagePreview);
     
     titleDiv.innerHTML = (currentElement.title); 
     statsDiv.innerHTML = currentElement.author + ' ' + 
@@ -89,5 +85,15 @@ function generateDivChildren(array) {
   }
 }
 
+function generateImage(currentElement, imagePreview) {
+  let redditLogo = 'url("http://www.doomsteaddiner.net/blog/wp-content/uploads/2015/10/reddit-logo.png")';
+  let currentElementImage = currentElement.preview.images[0].source.url;
+
+  if (!currentElement.preview || currentElementImage.match(/.(png|jpeg|gif)/g)) {
+    return redditLogo;
+  } else {
+    return `url("${currentElementImage}")`;
+  }
+}
+
 retrieveAPI('https://www.reddit.com/r/aww.json');
-// generateDivChildren(arrayOfAww);
