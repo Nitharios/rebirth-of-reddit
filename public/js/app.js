@@ -70,6 +70,10 @@ function generateDivChildren(array) {
     titleDiv.className = "titleDiv";
     statsDiv.className = "statsDiv";
 
+    innerWrapper.addEventListener("click", function() {
+      return open(currentElement.url);
+    });
+    
     imagePreview.style.backgroundImage = generateImage(currentElement, imagePreview);
     
     titleDiv.innerHTML = currentElement.title; 
