@@ -34,6 +34,17 @@ body {
       background-color: #FFFFFF;
       width: 100%;
       height: 55px; }
+    body #page_wrapper #expand {
+      position: absolute;
+      border: 2px solid orange;
+      color: #B74326;
+      line-height: 30px;
+      font-size: 30px;
+      font-weight: bold;
+      width: 35px;
+      height: 35px;
+      margin: 8px;
+      right: 5px; }
     body #page_wrapper .banners {
       background-color: #3B444B;
       width: 100%;
