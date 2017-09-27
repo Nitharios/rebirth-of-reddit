@@ -72,7 +72,7 @@ function generateDivChildren(array) {
 
     imagePreview.style.backgroundImage = generateImage(currentElement, imagePreview);
     
-    titleDiv.innerHTML = (currentElement.title); 
+    titleDiv.innerHTML = currentElement.title; 
     statsDiv.innerHTML = currentElement.author + ' ' + 
                          new Date(currentElement.created*1000) + ' ' +
                          currentElement.score + ' ' + 
@@ -85,6 +85,7 @@ function generateDivChildren(array) {
   }
 }
 
+// generates the image from the subreddit link
 function generateImage(currentElement, imagePreview) {
   let redditLogo = 'url("http://www.doomsteaddiner.net/blog/wp-content/uploads/2015/10/reddit-logo.png")';
   let currentElementImage = currentElement.preview.images[0].source.url;
