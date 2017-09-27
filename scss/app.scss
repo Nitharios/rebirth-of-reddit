@@ -5,7 +5,7 @@
 }
 
 @media (min-width: 0px) {
-  @include innerWrapperMargins(5px, 10px, 5px, 10px);
+  @include innerWrapperMargins(10px, 10px, 5px, 10px);
   #header {
     width: 150px;
   }
