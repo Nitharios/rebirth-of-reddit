@@ -55,25 +55,32 @@ function randomSubRGen(url) {
 }
 
 function generateDivChildren(array) {
+  // generates blocks for X number of links
   for (let i=1; i<5; i++) {
     let innerWrapper = document.createElement('div');
-    let imagePreview = document.createElement('img');
+    let imagePreview = document.createElement('div');
     let titleDiv = document.createElement('div');
     let statsDiv = document.createElement('div');
+    let currentElement = array[i].data;
+    let currentElementImage = currentElement.preview.images[0].source.url;
+    let redditLogo = 'url("http://www.doomsteaddiner.net/blog/wp-content/uploads/2015/10/reddit-logo.png")';
 
     innerWrapper.className = "innerWrapper";
     titleDiv.className = "titleDiv";
     imagePreview.className = "imagePreview";
     statsDiv.className = "statsDiv";
 
-    if (!array[i].data.preview || array[i].data.preview.images[0].source.url.match(/.(png|jpeg|gif)/g)) imagePreview.src = "http://www.doomsteaddiner.net/blog/wp-content/uploads/2015/10/reddit-logo.png";
-    else imagePreview.src = array[i].data.preview.images[0].source.url;
+    if (!currentElement.preview || currentElementImage.match(/.(png|jpeg|gif)/g)) {
+      imagePreview.style.backgroundImage = redditLogo;
+    } else {
+      imagePreview.style.backgroundImage = `url("${currentElementImage}")`;
+    }
     
-    titleDiv.innerHTML = (array[i].data.title); 
-    statsDiv.innerHTML = array[i].data.author + ' ' + 
-                         new Date(array[i].data.created*1000) + ' ' +
-                         array[i].data.score + ' ' + 
-                         array[i].data.num_comments;
+    titleDiv.innerHTML = (currentElement.title); 
+    statsDiv.innerHTML = currentElement.author + ' ' + 
+                         new Date(currentElement.created*1000) + ' ' +
+                         currentElement.score + ' ' + 
+                         currentElement.num_comments;
 
     wrapperDiv.appendChild(innerWrapper);
     innerWrapper.appendChild(imagePreview);

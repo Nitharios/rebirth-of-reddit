@@ -100,14 +100,13 @@ body {
       }
 
       .titleDiv {
-        width: 325px;
+        width: 375px;
         text-align: left;
         font-size: 20px;
         font-weight: bold;
         padding-left: 15px;
         // adjusts height of div according to content
-        overflow: auto;
-        display: block;
+
       }
 
       .statsDiv {
