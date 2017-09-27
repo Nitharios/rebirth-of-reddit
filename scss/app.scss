@@ -36,8 +36,6 @@ body {
   text-align: center;
 
   #page_wrapper {
-    // background-image: url("../assets/bg.jpg");
-    // background-size: cover;
     width: 100%;
 
     #header {
@@ -53,8 +51,7 @@ body {
       height: 55px;
     }
 
-    #navigation {
-      margin: auto;
+    .banners {
       background-color: #3B444B;
       width: 100%;
       height: 40px;
@@ -70,6 +67,7 @@ body {
         width: 125px;
         height: 40px;
         line-height: 40px;
+        vertical-align: bottom;
       }
 
       .navigation:hover {
@@ -79,6 +77,18 @@ body {
       #nav_boards {
         border-left: 1px solid #FFFFFF;
         border-right: 1px solid #FFFFFF;
+      }
+
+      #instagram {
+        background-image: url("../assets/instagram_grey.svg");
+        background-repeat: no-repeat;
+        background-position: right;
+      }
+
+      #facebook {
+        background-image: url("../assets/facebook_grey.svg");
+        background-repeat: no-repeat;
+        background-position: left;
       }
     }
 
@@ -106,7 +116,7 @@ body {
       }
 
       .titleDiv {
-        width: 375px;
+        width: 400px;
         text-align: left;
         font-size: 20px;
         font-weight: bold;

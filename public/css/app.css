@@ -34,8 +34,7 @@ body {
       background-color: #FFFFFF;
       width: 100%;
       height: 55px; }
-    body #page_wrapper #navigation {
-      margin: auto;
+    body #page_wrapper .banners {
       background-color: #3B444B;
       width: 100%;
       height: 40px;
@@ -43,18 +42,27 @@ body {
       list-style-type: none;
       margin: 0;
       padding: 0; }
-      body #page_wrapper #navigation .navigation {
+      body #page_wrapper .banners .navigation {
         text-align: center;
         margin: auto;
         display: inline-block;
         width: 125px;
         height: 40px;
-        line-height: 40px; }
-      body #page_wrapper #navigation .navigation:hover {
+        line-height: 40px;
+        vertical-align: bottom; }
+      body #page_wrapper .banners .navigation:hover {
         background-color: #555555; }
-      body #page_wrapper #navigation #nav_boards {
+      body #page_wrapper .banners #nav_boards {
         border-left: 1px solid #FFFFFF;
         border-right: 1px solid #FFFFFF; }
+      body #page_wrapper .banners #instagram {
+        background-image: url("../assets/instagram_grey.svg");
+        background-repeat: no-repeat;
+        background-position: right; }
+      body #page_wrapper .banners #facebook {
+        background-image: url("../assets/facebook_grey.svg");
+        background-repeat: no-repeat;
+        background-position: left; }
     body #page_wrapper #wrapper {
       margin: auto; }
     body #page_wrapper .innerWrapper {
@@ -74,7 +82,7 @@ body {
         height: 250px;
         margin-bottom: 5px; }
       body #page_wrapper .innerWrapper .titleDiv {
-        width: 375px;
+        width: 400px;
         text-align: left;
         font-size: 20px;
         font-weight: bold;
