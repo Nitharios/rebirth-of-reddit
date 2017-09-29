@@ -1,0 +1,155 @@
+$navigation_font_color: #808080;
+
+@mixin innerWrapperMargins($top, $right, $bottom, $left) {
+  .innerWrapper {
+    margin: $top $right $bottom $left;
+  }
+}
+
+@media (min-width: 0px) {
+  @include innerWrapperMargins(10px, 10px, 5px, 10px);
+  #header {
+    width: 150px;
+  }
+}
+
+@media (min-width: 500px) {
+  @include innerWrapperMargins(20px, 20px, 20px, 20px);
+
+  #header {
+    width: 100%;
+    background-position: center;
+  }
+  #header_background {
+    background-image: url("../assets/header_bg.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  #wrapper {
+    max-width: 1250px;
+  }
+}
+
+body {
+  background-image: url("../assets/bg.jpg");
+  background-size: cover;
+  margin: 0;
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+
+  #page_wrapper {
+    width: 100%;
+
+    #header {
+      background-image: url("../assets/logo.svg");
+      background-repeat: no-repeat;
+      position: absolute;
+      height:55px;
+    }
+
+    #header_background {
+      background-color: #FFFFFF;
+      width: 100%;
+      height: 55px;
+    }
+
+    #expand {
+      position: absolute;
+      border: 2px solid orange;
+      color: #B74326;
+      line-height: 30px;
+      font-size: 30px;
+      font-weight: bold;
+      width: 35px;
+      height: 35px;
+      margin: 8px;
+      right: 5px;
+    }
+
+    .banners {
+      background-color: #3B444B;
+      width: 100%;
+      height: 40px;
+      color: $navigation_font_color;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    
+      .navigation {
+        text-align: center;
+        margin: auto;
+        display: inline-block;
+        width: 125px;
+        height: 40px;
+        line-height: 40px;
+        vertical-align: bottom;
+      }
+
+      .navigation:hover {
+          background-color: #555555;
+      }
+
+      #nav_boards {
+        border-left: 1px solid $navigation_font_color;
+        border-right: 1px solid $navigation_font_color;
+      }
+
+      #instagram {
+        background-image: url("../assets/instagram_grey.svg");
+        background-repeat: no-repeat;
+        background-position: right;
+      }
+
+      #facebook {
+        background-image: url("../assets/facebook_grey.svg");
+        background-repeat: no-repeat;
+        background-position: left;
+      }
+    }
+
+    #wrapper {
+      margin: auto;
+    }
+
+    .innerWrapper {
+      border: 10px solid transparent;
+      background-color: #FFFFFF;
+      width: 425px;
+      height: 450px;
+      display: inline-block;
+      padding-top: 10px;
+      vertical-align: top;
+    
+      .imagePreview {
+        margin: auto;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 400px;
+        height: 250px;
+        margin-bottom: 5px;
+      }
+
+      .titleDiv {
+        width: 400px;
+        text-align: left;
+        font-size: 20px;
+        font-weight: bold;
+        padding-left: 15px;
+      }
+
+      .statsDiv {
+        margin-top: 5px;
+        width: 325px;
+        text-align: left;
+        font-size: 12px;
+        padding-left: 15px;
+      }
+    }
+
+    .innerWrapper:hover {
+      border: 10px solid #ED872D;
+    }
+  }
+}
+
